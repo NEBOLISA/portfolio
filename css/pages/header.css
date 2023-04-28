@@ -1,0 +1,225 @@
+header .social_icons {
+  background-color: var(--socialBg);
+  padding: 0.7rem 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 900;
+}
+.social_icons,
+.social,
+.connect,
+.navs,
+ul {
+  display: flex;
+  align-items: center;
+}
+.social_icons .social {
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+.social_icons .connect {
+  justify-content: space-between;
+  gap: 1rem;
+}
+.social_icons h4 {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--blackColor);
+}
+.social_icons a {
+  color: var(--blackColor);
+}
+.social_icons a:hover {
+  color: var(--socialHover);
+}
+
+.dark_toggle {
+  position: relative;
+  background-color: var(--toggleBg);
+  width: 3rem;
+  height: 1.5rem;
+  border-radius: 50px;
+  box-shadow: 0px 0px 1px 0.1px inset rba(0, 0, 0);
+}
+.dark_toggle:hover {
+  cursor: pointer;
+}
+.dark_toggle .toggle {
+  position: absolute;
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: var(--toggleHead);
+  border-radius: 50%;
+  top: -0.12rem;
+  left: -0.1rem;
+  box-shadow: 0px 0px 2px 0.3px inset #000;
+  cursor: pointer;
+  transition: 400ms ease;
+}
+.dark_toggle .right_toggle {
+  position: absolute;
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: var(--toggleHead);
+  border-radius: 50%;
+  top: -0.12rem;
+  right: -0.1rem;
+  display: none;
+  box-shadow: 0px 0px 2px 0.3px inset #000;
+  cursor: pointer;
+  transition: 400ms ease;
+}
+
+.navs {
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 0;
+}
+.navs .nav_title h1 {
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 4px;
+  font-size: 1.9rem;
+  color: var(--blackColor);
+}
+.navs .nav_title .tag {
+  color: var(--darkBlack);
+  padding-bottom: 2rem;
+  text-align: center;
+}
+.navs ul {
+  gap: 2rem;
+  list-style-type: none;
+}
+.navs ul li a {
+  color: var(--blackColor);
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+}
+.navs ul li a::before {
+  content: "";
+  position: absolute;
+  bottom: -0.2rem;
+  left: 0;
+  right: 0;
+  background-color: var(--blackColor);
+  height: 1px;
+  transform: scale(0);
+  transition: 400ms ease-in-out;
+  transform-origin: left;
+}
+.navs ul li a:hover::before {
+  transform: scale(1);
+}
+.navs ul li a:hover {
+  color: var(--socialHover);
+}
+
+/* banner part */
+header .banner {
+  width: 100%;
+  height: 600px;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  background: url("../../images/busniess.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.banner .banner_text {
+  background-color: var(--bannerBg);
+  width: 32rem;
+  padding: 2rem;
+  position: relative;
+  margin: 12rem 0 0 5rem;
+}
+.banner_text span,
+h1 {
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+.banner_text h1 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  padding: 0.5rem 0;
+}
+.banner_text p {
+  width: 25rem;
+  padding-bottom: 1rem;
+  margin: 0 auto;
+}
+.banner_text .banner_btn {
+  padding: 0.3rem 1rem;
+
+  margin: 0 auto;
+}
+.banner_btn {
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+.banner_btn:hover {
+  transform: translateY(-10px) translate(-50%, 0%);
+}
+@media (max-width: 500px) {
+  .dark_toggle {
+    height: 1.2rem;
+    width: 2.5rem;
+  }
+  .dark_toggle .toggle {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+}
+@media (max-width: 680px) {
+  .social_icons .social {
+    width: 90%;
+  }
+  .header .banner {
+    justify-content: center;
+    align-items: center;
+  }
+  .banner .banner_text {
+    margin: auto;
+    margin-top: 12rem;
+  }
+}
+@media (max-width: 590px) {
+  .banner .banner_text {
+    width: 90%;
+    text-align: center;
+  }
+  .banner_text p {
+    width: 90%;
+  }
+}
+@media (max-width: 430px) {
+  .banner .banner_btn {
+    left: 25%;
+    transform: translate(0);
+  }
+  .banner .banner_btn:hover {
+    transform: translateY(-10px);
+  }
+  .navs ul {
+    gap: 0;
+    justify-content: space-between;
+    width: 90%;
+  }
+  .navs li a {
+    font-size: 0.9rem;
+  }
+  .navs .nav_title h1 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}

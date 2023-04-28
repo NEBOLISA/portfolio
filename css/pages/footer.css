@@ -1,0 +1,69 @@
+footer .foot_social {
+  background-color: var(--socialBg);
+  padding: 0.8rem 0 0.4rem 0;
+  position: relative;
+}
+
+.foot_social .social_icons .arrow_up {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 10px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 10%;
+  width: 3rem;
+  background-color: var(--arrow);
+  cursor: pointer;
+  border: none;
+  font-size: 1.8rem;
+}
+
+.social_icons .arrow_up:hover {
+  background-color: rgba(0, 0, 0, 0.404);
+}
+
+.social_icons .arrow_up i {
+  font-size: 1.5rem;
+  pointer-events: none;
+}
+
+.foot_profile h4 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--darkBlack);
+  font-weight: 600;
+  padding-top: 1rem;
+}
+
+.footer .copyright {
+  background-color: var(--copyRight);
+  text-align: center;
+  padding: 0.5rem 0;
+  letter-spacing: 1px;
+}
+
+.copyright p {
+  color: var(--darkBlack);
+  font-size: 0.9rem;
+}
+
+/* responsive part  */
+@media (max-width: 680px) {
+  .foot_social .social_icons .arrow_up {
+    right: 4%;
+  }
+
+  .social_icons .arrow_up i {
+    font-size: 1.2rem;
+  }
+
+  .foot_profile h4 {
+    font-size: 0.8rem;
+  }
+
+  .footer .copyright p {
+    font-size: 0.7rem;
+  }
+}

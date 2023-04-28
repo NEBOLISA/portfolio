@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500;700&display=swap");
+
+@import url("./pages/banner.css");
+@import url("./pages/header.css");
+
+@import url("./pages/support.css");
+@import url("./pages/review.css");
+@import url("./pages/posts.css");
+@import url("./pages/subscribe.css");
+@import url("./pages/logos.css");
+@import url("./pages/footer.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --blackColor: #000;
+  --whiteColor: #fff;
+  --toggleBg: rgb(216, 216, 216);
+  --toggleHead: rgb(255, 255, 255);
+  --arrow: #fff;
+  --socialBg: #f2ebcf;
+  --bannerBg: #f3f3e997;
+  --socialHover: rgba(0, 0, 0, 0.404);
+  --btnBg: #d8c056;
+  --supportBg: #cbdfe0;
+  --reviewBg: #f2ebcf;
+  --subscribeBg: #84b9bd;
+  --copyRight: #84b9bd;
+  --darkBlack: rgba(0, 0, 0, 0.7);
+  --loader: rgb(0, 0, 0);
+}
+
+.dark__bg {
+  background-color: rgb(27, 27, 27);
+  --blackColor: #fff;
+  --whiteColor: #000;
+  --toggleBg: rgb(135, 134, 134);
+  --toggleHead: rgb(203, 201, 201);
+  --socialBg: #545353;
+  --bannerBg: #f3f3e997;
+  --socialHover: rgba(203, 203, 203, 0.404);
+  --btnBg: #dccf94;
+  --supportBg: rgb(27, 27, 27);
+  --reviewBg: rgb(27, 27, 27);
+  --subscribeBg: rgb(27, 27, 27);
+  --copyRight: #494949;
+  --arrow: rgb(199, 197, 197);
+  --darkBlack: rgba(197, 197, 197, 0.7);
+  --loader: rgb(100, 100, 100);
+}
+
+.btn_style {
+  padding: 0.6rem 1.5rem;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 400ms ease-in-out;
+  background-color: var(--btnBg);
+}
+.loader {
+  position: fixed;
+  inset: 0;
+  background-color: var(--loader);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 400ms ease-in-out;
+}
+
+.loader h1 {
+  text-transform: uppercase;
+  color: var(--whiteColor);
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+  font-size: 5rem;
+  font-weight: 900;
+  background-image: linear-gradient(var(--whiteColor), var(--whiteColor));
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-position: -700px 0;
+  animation: animation 3s forwards;
+}
+
+@keyframes animation {
+  100% {
+    background-position: 0 0;
+  }
+}

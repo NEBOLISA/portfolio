@@ -1,0 +1,129 @@
+.client {
+  background-color: var(--reviewBg);
+  padding: 3rem 0;
+  position: relative;
+}
+
+.client .client_contents {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.client_contents h1 {
+  display: inline;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  position: relative;
+  color: var(--blackColor);
+}
+
+.client_contents h1::before {
+  content: "";
+  position: absolute;
+  bottom: -0.4rem;
+  right: -1.2rem;
+  width: 6rem;
+  height: 0.2rem;
+  background-color: var(--blackColor);
+}
+
+.client_slider {
+  padding-top: 4rem;
+  overflow: hidden;
+}
+
+.client_slider .review {
+  width: 80%;
+  margin: 0 auto;
+  line-height: 1.8rem;
+  color: var(--blackColor);
+}
+
+.client_slider .author {
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 2rem;
+  letter-spacing: 1px;
+  color: var(--darkBlack);
+}
+
+/* slick arrows */
+.slider_btn {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slider_btn button {
+  font-size: 2.5rem;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: var(--blackColor);
+}
+
+.slider_btn button i {
+  pointer-events: none;
+}
+
+.slider_btn button:hover {
+  color: var(--darkBlack);
+}
+
+/* slick dots  */
+.slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 0.5rem;
+}
+
+.slick-dots .slick-active button {
+  background-color: var(--btnBg);
+}
+
+.slick-dots li {
+  list-style: none;
+}
+
+.slick-dots li button {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  text-indent: -1000em;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+/* responsive part  */
+
+@media (max-width: 990px) {
+  .client .client_contents {
+    width: 90%;
+  }
+  .slider_btn {
+    width: 95%;
+  }
+}
+
+@media (max-width: 600px) {
+  .client .client_contents p {
+    width: 90%;
+    text-align: center;
+  }
+  .client_contents h1 {
+    margin: 0 auto;
+  }
+
+  .slider_btn {
+    display: none;
+  }
+}

@@ -1,0 +1,49 @@
+.company_logo {
+  width: 80%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+.company_logo .title {
+  text-transform: uppercase;
+  display: inline;
+  position: relative;
+  padding-right: 1rem;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--blackColor);
+}
+
+.company_logo .title::before {
+  content: "";
+  position: absolute;
+  bottom: -0.3rem;
+  right: 0;
+  height: 3px;
+  width: 3rem;
+  background-color: var(--blackColor);
+}
+
+.company_logo .logos {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding-top: 3rem;
+}
+
+.logos img {
+  width: 10rem;
+}
+
+/* responsive part  */
+@media (max-width: 665px) {
+  .company_logo .logos {
+    width: 90%;
+    flex-wrap: wrap;
+  }
+}

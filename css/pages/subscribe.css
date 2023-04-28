@@ -1,0 +1,58 @@
+.subscribe {
+  background-color: var(--subscribeBg);
+}
+
+.subscribe .subscribe_content {
+  padding: 3rem 0 4rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.subscribe_content .title {
+  font-weight: 500;
+  color: var(--blackColor);
+}
+
+.subscribe_input {
+  width: 32rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.subscribe_input .input {
+  padding: 0.6rem 1rem;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.subscribe_content button:hover {
+  background-color: black;
+  color: white;
+}
+
+@media (max-width: 772px) {
+  .subscribe_content .title {
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .subscribe_input {
+    width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .subscribe_input {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .subscribe_input button {
+    width: 100%;
+  }
+}
